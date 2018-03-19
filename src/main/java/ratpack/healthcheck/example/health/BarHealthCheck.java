@@ -1,10 +1,12 @@
 package ratpack.healthcheck.example.health;
 
+import com.google.inject.Singleton;
 import ratpack.exec.Promise;
 import ratpack.health.HealthCheck;
 import ratpack.healthcheck.example.data.bar.BarRepository;
 import ratpack.registry.Registry;
 
+@Singleton
 public class BarHealthCheck implements HealthCheck {
 
     @Override
