@@ -21,13 +21,15 @@ public class FooHandler implements Handler {
 
             if (healthy) {
                 LOG.info("Setting Foo Health: Healthy");
-                fooRepo.setHealthy();
+                fooRepo.setHealthy().then(() -> {
+                    ctx.getResponse().send();
+                });
             } else {
                 LOG.info("Setting Foo Health: Unhealthy");
-                fooRepo.setUnhealthy();
+                fooRepo.setUnhealthy().then(() -> {
+                    ctx.getResponse().send();
+                });
             }
-
-            ctx.getResponse().send();
         });
     }
 }

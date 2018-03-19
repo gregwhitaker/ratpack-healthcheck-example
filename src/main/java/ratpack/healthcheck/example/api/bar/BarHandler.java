@@ -21,13 +21,15 @@ public class BarHandler implements Handler {
 
             if (healthy) {
                 LOG.info("Setting Bar Health: Healthy");
-                barRepo.setHealthy();
+                barRepo.setHealthy().then(() -> {
+                    ctx.getResponse().send();
+                });
             } else {
                 LOG.info("Setting Bar Health: Unhealthy");
-                barRepo.setUnhealthy();
+                barRepo.setUnhealthy().then(() -> {
+                    ctx.getResponse().send();
+                });
             }
-
-            ctx.getResponse().send();
         });
     }
 }
