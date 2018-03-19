@@ -1,24 +1,27 @@
 package ratpack.healthcheck.example.data.bar;
 
 import com.google.inject.Singleton;
+import ratpack.exec.Blocking;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
 
 @Singleton
 public class DefaultBarRepository implements BarRepository {
 
+    private volatile boolean healthy = true;
+
     @Override
     public Operation setHealthy() {
-        return null;
+        return Operation.of(() -> healthy = true);
     }
 
     @Override
     public Operation setUnhealthy() {
-        return null;
+        return Operation.of(() -> healthy = false);
     }
 
     @Override
     public Promise<Boolean> isHealthy() {
-        return null;
+        return Blocking.get(() -> healthy);
     }
 }
