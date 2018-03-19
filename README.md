@@ -17,7 +17,22 @@ control the health of the components and see the effect on their respective heal
     
         bar : HEALTHY [The bar endpoint is currently healthy]
         foo : HEALTHY [The foo endpoint is currently healthy]
+
+3. Set the foo component's state to unhealthy using the following command:
+
+        $ curl -X "POST" "http://localhost:5050/foo" \
+             -H 'Content-Type: application/x-www-form-urlencoded; charset=utf-8' \
+             --data-urlencode "healthy=false"
+
+4. Now re-run the all healthchecks endpoint and validate that foo is unhealthy:
+
+        $ curl "http://localhost:5050/health"
+        
+    You should see the following response:
     
+        bar : HEALTHY [The bar endpoint is currently healthy]
+        foo : UNHEALTHY [The foo endpoint is currently unhealthy]
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-healthcheck-example/issues).
 
