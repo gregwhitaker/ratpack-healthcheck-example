@@ -1,4 +1,6 @@
 # ratpack-healthcheck-example
+[![Build Status](https://travis-ci.org/gregwhitaker/ratpack-healthcheck-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/ratpack-healthcheck-example)
+
 An example of configuring healthchecks for a [Ratpack](https://www.ratpack.io) service.
 
 This example starts a service containing two components, foo and bar, which each have their own Ratpack healthchecks implemented. You are able to
