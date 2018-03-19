@@ -6,6 +6,9 @@ import ratpack.health.HealthCheck;
 import ratpack.healthcheck.example.data.foo.FooRepository;
 import ratpack.registry.Registry;
 
+/**
+ * Dummy example healthcheck that checks if foo component is healthy.
+ */
 @Singleton
 public class FooHealthCheck implements HealthCheck {
 

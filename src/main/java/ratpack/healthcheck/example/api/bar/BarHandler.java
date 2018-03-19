@@ -8,6 +8,9 @@ import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.healthcheck.example.data.bar.BarRepository;
 
+/**
+ * Handler that changes the health status of the bar component for demonstration purposes.
+ */
 public class BarHandler implements Handler {
     private static final Logger LOG = LoggerFactory.getLogger(BarHandler.class);
 

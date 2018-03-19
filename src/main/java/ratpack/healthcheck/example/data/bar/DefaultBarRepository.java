@@ -5,6 +5,9 @@ import ratpack.exec.Blocking;
 import ratpack.exec.Operation;
 import ratpack.exec.Promise;
 
+/**
+ * Repository that is keeping track of the health of the bar component that gets set via the api.
+ */
 @Singleton
 public class DefaultBarRepository implements BarRepository {
 

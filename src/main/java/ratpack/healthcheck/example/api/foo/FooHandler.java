@@ -8,6 +8,9 @@ import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.healthcheck.example.data.foo.FooRepository;
 
+/**
+ * Handler that changes the health status of the foo component for demonstration purposes.
+ */
 public class FooHandler implements Handler {
     private static final Logger LOG = LoggerFactory.getLogger(FooHandler.class);
 
