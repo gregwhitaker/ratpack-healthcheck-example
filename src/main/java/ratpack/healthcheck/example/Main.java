@@ -24,7 +24,6 @@ public class Main {
                         .module(HealthModule.class))
                 )
                 .handlers(chain -> chain
-                        .get("health/:name?", HealthCheckHandler.class)
                         .insert(ApiEndpoints.class)
                 )
         );
