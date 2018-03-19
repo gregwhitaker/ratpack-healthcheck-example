@@ -32,6 +32,16 @@ control the health of the components and see the effect on their respective heal
     
         bar : HEALTHY [The bar endpoint is currently healthy]
         foo : UNHEALTHY [The foo endpoint is currently unhealthy]
+        
+5. You can run the individual healthchecks using the following commands:
+
+    Run the Foo Healthcheck:
+    
+        $ curl "http://localhost:5050/health/foo"
+    
+    Run the Bar Healthcheck:
+    
+        $ curl "http://localhost:5050/health/bar"
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-healthcheck-example/issues).
