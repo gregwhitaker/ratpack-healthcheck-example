@@ -12,6 +12,11 @@ control the health of the components and see the effect on their respective heal
 2. Once the application has started check the health of all healthchecks using the following command:
 
         $ curl "http://localhost:5050/health"
+        
+    You should see the following response:
+    
+        bar : HEALTHY [The bar endpoint is currently healthy]
+        foo : HEALTHY [The foo endpoint is currently healthy]
     
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-healthcheck-example/issues).
