@@ -26,6 +26,8 @@ public class FooHandler implements Handler {
                 LOG.info("Setting Foo Health: Unhealthy");
                 fooRepo.setUnhealthy();
             }
+
+            ctx.getResponse().send();
         });
     }
 }

@@ -26,6 +26,8 @@ public class BarHandler implements Handler {
                 LOG.info("Setting Bar Health: Unhealthy");
                 barRepo.setUnhealthy();
             }
+
+            ctx.getResponse().send();
         });
     }
 }
