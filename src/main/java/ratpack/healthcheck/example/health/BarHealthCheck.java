@@ -11,7 +11,7 @@ public class BarHealthCheck implements HealthCheck {
 
     @Override
     public String getName() {
-        return "BarHealthCheck";
+        return "bar";
     }
 
     @Override

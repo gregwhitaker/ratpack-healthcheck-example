@@ -12,7 +12,7 @@ public class FooHealthCheck implements HealthCheck {
 
     @Override
     public String getName() {
-        return "FooHealthCheck";
+        return "foo";
     }
 
     @Override
