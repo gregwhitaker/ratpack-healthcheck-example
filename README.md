@@ -5,10 +5,14 @@ This example starts a service containing two components, foo and bar, which each
 control the health of the components and see the effect on their respective healthcheck endpoints.
 
 ## Running the Example
-You can start the example by running the following Gradle command:
+1. Start the example by running the following Gradle command:
 
-    $ ./gradlew run 
+        $ ./gradlew run 
 
+2. Once the application has started check the health of all healthchecks using the following command:
+
+        $ curl "http://localhost:5050/health"
+    
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-healthcheck-example/issues).
 
