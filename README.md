@@ -1,4 +1,5 @@
 # ratpack-healthcheck-example
+An example of configuring healthchecks for a [Ratpack](https://www.ratpack.io) service.
 
 ## Running the Example
 You can start the example by running the following Gradle command:
